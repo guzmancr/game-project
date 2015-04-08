@@ -43,15 +43,7 @@ diceNumber;//number for the value from a dice roll.
 string pieceHolder=" ";
 
  srand (time(NULL));//for the random number
- /*
- vector<Player*> Playa(2);
 
- cout<<Playa[1]->printPiece()<<" | "<< Playa[1]->ShowMoney()<<endl;
- 
-WallSt.givethMoney(Playa, 1 , 500);
-
- cout<<Playa[1]->printPiece()<<" | "<< Playa[1]->ShowMoney()<<endl;
- */
  cout<<"Welcome to BOMMONOPALY\n How many players are going to play?"<<endl;//prompt numb of players
  cin>>numbofPlayers;
 // possibly replace with a pop up window aslkng for players
@@ -72,7 +64,6 @@ WallSt.givethMoney(Playa, 1 , 500);
  cout<<"Player "<<i+1<<" Please enter the piece you would want for the game\n";//prompt for pieses
  cin>> pieceHolder;//user enters the piece for the player
 //student[i].PrintPlayNumb();
-//QT could assign the piec based of the player number;
 
  	if(pieceHolder.size()>1){//if the use puts in too many pieces then the program will quit
 	cout<<"too many pieces"<<endl;
@@ -83,10 +74,7 @@ WallSt.givethMoney(Playa, 1 , 500);
  game.ReplacePiece(0,i,student[i].printPiece());//enters the piece of the player after using a funtion to return the piece then the board classtakes in nthe funtion
  }
 
-/*
-Action *actions[1];
-actions[0] = new card;
-*/
+
 
  printBoard( game);//print starting game
 // can be completely redone using guis and widgets
@@ -156,13 +144,13 @@ actions[0] = new card;
 
 				}else if(PlayerAnswer=='n'||PlayerAnswer=='N'){
 				//the player has desides to stop playing 
-				//sudent[i].setNumber(0);
+				
 				 PreviorLoc= student[i].PrintLocation();
 				game.ReplacePiece(PreviorLoc, i , spacedOut );
 				cout<<"Player "<<i+1<<" desided to not rolled"<<endl;
 				battle=false;
 				}
-//US inheratace to hisplay the option to blowup or build propert. The propery is build with a true and destoyed by false
+//Us inheratace to display the option to blowup or build propert. The propery is build with a true and destoyed by false
 //also give the varibles for 'bool' and another 'int' to hold the blown up property
 			}
 		printBoard( game);
